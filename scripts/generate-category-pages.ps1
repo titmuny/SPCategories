@@ -83,6 +83,11 @@ for ($markerIndex = 0; $markerIndex -lt $categoryMarkers.Count; $markerIndex++) 
     $fileBaseName = if ($categoryToLabel.ContainsKey($marker.Category)) { $categoryToLabel[$marker.Category] } else { $marker.Category }
     $fileName = "$fileBaseName.html"
     $pageHtml = $pageHtml -replace '<title>SP</title>', "<title>SP - $fileBaseName</title>"
+    $pageHtml = $pageHtml.Replace('<a class="navbar-brand d-none d-lg-block" href="index.html">', "<a class=""navbar-brand d-none d-lg-block"" href=""$fileName"">")
+    $pageHtml = $pageHtml.Replace('<a class="nav-link active text-black nav-hover" href="index.html">Home</a>', "<a class=""nav-link active text-black nav-hover"" href=""$fileName"">Home</a>")
+    $pageHtml = $pageHtml.Replace(' data-bs-toggle="offcanvas"', '')
+    $pageHtml = $pageHtml.Replace(' data-bs-target="#sidebarMenu"', '')
+    $pageHtml = $pageHtml.Replace([Environment]::NewLine + '                        aria-controls="sidebarMenu"', '')
 
     $defaultCategoryScript = @"
     <script>
