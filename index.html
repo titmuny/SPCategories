@@ -43,9 +43,9 @@
 
 <!-- Begins 11/05/2025 -->
 
-<div id="topBanner">
-    <img src="Banner.jpg" style="width: 100%; height: auto;" loading="eager" fetchpriority="high" decoding="async">
-</div>
+<!-- <div id="topBanner">
+    <img src="Banner.webp" style="width: 100%; height: auto;" loading="eager" fetchpriority="high" decoding="async">
+</div> -->
 
 <!-- Navbar --> 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm"
@@ -71,7 +71,7 @@
         </div>
 
         <!-- Logo (desktop only) -->
-        <a class="navbar-brand d-none d-lg-block" href="#">
+        <a class="navbar-brand d-none d-lg-block" href="index.html">
             <img src="Blue.png" alt="S90 Logo" style="height: 60px;">
         </a>
 
@@ -81,7 +81,7 @@
             <!-- Left nav links -->
             <ul class="navbar-nav align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link active text-black nav-hover" href="home.html">Home</a>
+                    <a class="nav-link active text-black nav-hover" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-black nav-hover" href="#">Features</a>
@@ -107,7 +107,7 @@
 </nav>
 
     <!-- Sidebar Offcanvas Menu -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarLabel"
+    <!-- <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarLabel"
         style="background-color: #ffffff;">
         <div class="offcanvas-header border-bottom border-light">
             <h5 class="offcanvas-title text-white fw-semibold" id="sidebarLabel" style="color: black !important; font-family: poppins;">  <i class="bi bi-card-list"></i>
@@ -151,23 +151,22 @@
             <li class="nav-item"><a class="nav-link text-black sidebar-hover category-filter" href="#" data-category="អំពូល-LIGHT">អំពូល-Light</a></li>
         </ul>
     </div>
-    </div>
+    </div> -->
 
+    
 
     </ul>
     </div>
     </div>
 
 <!-- Sticky Category Bar -->
-<div class="container-fluid category-bar">
+<!-- <div class="container-fluid category-bar">
   <div class="container position-relative">
 
-    <!-- Left Button -->
     <button class="scroll-btn left btn btn-light rounded-circle shadow-sm position-absolute top-50 start-0 translate-middle-y">
       <i class="bi bi-chevron-left"></i>
     </button>
 
-    <!-- Scrollable Buttons -->
     <div class="d-flex overflow-auto no-scrollbar px-5" id="categoryButtons" 
          style="scroll-behavior: smooth; font-family: Poppins, 'Khmer OS Battambang';">
       <button class="btn btn-outline-primary rounded-pill m-2 category-filter flex-shrink-0 active" data-category="All">All</button>
@@ -203,13 +202,12 @@
       <button class="btn btn-outline-primary rounded-pill m-2 category-filter flex-shrink-0" data-category="អំពូល-LIGHT">អំពូល-Light</button>
     </div>
 
-    <!-- Right Button -->
     <button class="scroll-btn right btn btn-light rounded-circle shadow-sm position-absolute top-50 end-0 translate-middle-y">
       <i class="bi bi-chevron-right"></i>
     </button>
 
   </div>
-</div>
+</div> -->
 
     <div id="carouselExampleIndicators" class="carousel slide img-fluid" data-bs-ride="carousel">
         <!-- Indicators -->
@@ -33029,6 +33027,10 @@
                     filterByCategory(category);
                 });
             });
+
+            if (window.DEFAULT_CATEGORY) {
+                filterByCategory(window.DEFAULT_CATEGORY);
+            }
 
             // =========================
             // AUTO HIGHLIGHT ON SCROLL
