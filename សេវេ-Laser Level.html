@@ -1433,8 +1433,8 @@
             function getTelegramShareUrls() {
                 const text = encodeURIComponent(buildTelegramOrderText());
                 return {
-                    app: 'tg://resolve?domain=simplyshoppingKH&text=' + text,
-                    web: 'https://t.me/simplyshoppingKH?text=' + text
+                    app: 'tg://resolve?domain=simplyshoppingKH_1&text=' + text,
+                    web: 'https://t.me/simplyshoppingKH_1?text=' + text
                 };
             }
 
@@ -1622,7 +1622,7 @@
                     currentSelections = [currentSelection];
                 }
 
-                orderBtn.href = 'https://t.me/simplyshoppingKH';
+                orderBtn.href = 'https://t.me/simplyshoppingKH_1';
                 renderSummary();
                 modal.show();
             }
